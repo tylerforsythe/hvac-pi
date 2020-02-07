@@ -1,4 +1,6 @@
 import airsensor
 
-airsensor.init()
-airsensor.readAndPrint()
+airSensor = airsensor.AirSensor()
+
+airSensor.init()
+airSensor.readAndPrint()
