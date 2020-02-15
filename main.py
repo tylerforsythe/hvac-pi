@@ -1,5 +1,6 @@
 import airsensor
 from rebootbtn import RebootButton
+from furnaceswitch import FurnaceSwitch
 from timer import Timer
 import threading
 import queue
@@ -23,7 +24,11 @@ def main():
     logTimer = Timer("air_log")
     logTimer.start(2)
 
+    furnaceOne = FurnaceSwitch()
+    furnaceOne.setupWith(23)
+
     rebootCheck = RebootButton()
+    rebootCheck.setupWith(24)
     airSensor = airsensor.AirSensor()
 
     while (True):

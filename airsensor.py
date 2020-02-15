@@ -16,6 +16,7 @@ class AirSensor:
 
 
     def readAndPrint(self):
+        return
         print("Temperature: %0.1f C" % self._bme680.temperature)
         print("Gas: %d ohm" % self._bme680.gas)
         print("Humidity: %0.1f %%" % self._bme680.humidity)
